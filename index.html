@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix</title>
+    <link rel="icon" href="imagenes/logos_netflix-icon.ico">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-black flex flex-col justify-center">
+    <div>
+        <div class="login mt-20">
+            <div class="flex flex-col">
+                <div class="shadow-drop-2-center flex justify-center">
+                    <img src="imagenes/logos_netflix.png" alt="">
+                </div>
+            </div>
+            <div class="flex flex-col justify-center items-center">
+                <input id="email" class="bg-[#D9D9D9] my-6 px-5 py-4 w-64 rounded-lg" type="text" placeholder="Ingresa tu email">
+                <input id="clave" class="bg-[#D9D9D9] mb-6 px-5 py-4 w-64 rounded-lg" type="password" placeholder="Contraseña">
+                <p id="advertencia" class="mb-4 w-52 text-center"></p>
+                <button id="start_secton" class="bg-[#EE1717] text-white px-5 py-2.5 w-40 rounded-lg font-medium">Iniciar sesion</button>
+                <p class="text-white mt-16">No tienes cuenta aun? <span class="text-[#FF0F0F] font-semibold">Crear cuenta</span></p>
+            </div>
+        </div>
+        <div class="profiles hidden mt-14">
+            <div class="flex flex-col justify-center items-center m-4">
+                <img id="change_account" src="imagenes/Vector.png" alt="">
+                <img class="absolute right-5" src="imagenes/bx_bxs-pencil.png" alt="">
+            </div>
+            <div class="flex justify-center items-center text-center">
+                <div id="Profile-1" class="m-4">
+                    <img src="imagenes/Rectangle 2.png" alt="">
+                    <p class="text-white">Emenalo</p>
+                </div>
+                <div id="Profile-2" class="m-4">
+                    <img src="imagenes/Rectangle 3.png" alt="">
+                    <p class="text-white">Onyeka</p>
+                </div>
+            </div>
+            <div class="flex justify-center items-center text-center">
+                <div id="Profile-3" class="m-4">
+                    <img src="imagenes/Rectangle 4.png" alt="">
+                    <p class="text-white">Thelma</p>
+                </div>
+                <div id="Profile-4" class="m-4">
+                    <img src="imagenes/Rectangle 5.png" alt="">
+                    <p class="text-white">Kids</p>
+                </div>
+            </div>
+            <div class=" flex flex-col justify-center items-center">
+                <div class=" mr-28 mt-8">
+                    <img class="ml-2.5 mb-4" src="imagenes/Group 1.png" alt="">
+                    <p class="text-white">Add Profile</p>
+                </div>
+            </div>
+        </div>
+        <div class="home hidden flex justify-center flex-col items-center">
+            <div class="w-full flex justify-center items-center">
+                <div class="fondo">
+                    <div class="flex flex-col items-center text-white">
+                        <div class="flex justify-between items-center gap-8">
+                            <img id="change_profile" src="imagenes/logos_netflix-icon.png" alt="">
+                            <a href="#">TV Shows</a>
+                            <a href="#">Movies</a>
+                            <a href="#">My List</a>
+                        </div>
+                    </div>
+                    <div class="flex justify-center gap-2 mt-[430px] text-white">
+                        <img class="w-5" src="imagenes/Group 16.png" alt="">
+                        <p>#2 in Nigeria Today</p>
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-center items-center gap-x-12 mt-10">
+                <div class="flex flex-col justify-center items-center">
+                    <img src="imagenes/ant-design_plus-outlined.png" alt="">
+                    <p class="text-white">My List</p>
+                </div>
+                <div class="">
+                    <button id="play" class="bg-[#C4C4C4] flex px-5 py-2.5 gap-2.5 font-medium rounded-lg text-xl items-center"> <img src="imagenes/play.png" alt=""> Play</button>
+                </div>
+                <div class="flex flex-col justify-center items-center">
+                    <img class="mb-0.5" src="imagenes/Group.png" alt="">
+                    <p class="text-white">Info</p>
+                </div>
+            </div>
+            <div class="w-full flex flex-col justify-center items-center mt-10">
+                <h1 class="text-white text-3xl font-bold mr-60">Previews</h1>
+                <div class="flex mt-6 gap-5 ml-7">
+                    <img src="imagenes/Ellipse 2.png" alt="">
+                    <img src="imagenes/Ellipse 3.png" alt="">
+                    <img src="imagenes/Ellipse 4.png" alt="">
+                    <img src="imagenes/Ellipse 4 (1).png" alt="">
+                </div>
+            </div>
+            <div class="fixed bottom-[0px] w-full">
+                <div class="bg-[#121212] w-full flex justify-center gap-8 p-2.5">
+                    <div class="flex flex-col justify-center items-center">
+                        <img src="imagenes/line-md_home-simple.png" alt="">
+                        <p class="text-white text-xs">Home</p>
+                    </div>
+                    <div id="Search" class="flex flex-col justify-center items-center">
+                        <img src="imagenes/feather_search.png" alt="">
+                        <p class="text-[#8C8787] text-xs">Search</p>
+                    </div>
+                    <div class="flex flex-col justify-center items-center">
+                        <img src="imagenes/reproducir.png" alt="">
+                        <p class="text-[#8C8787] text-xs">Coming Soon</p>
+                    </div>
+                    <div class="flex flex-col justify-center items-center">
+                        <img src="imagenes/descargas.png" alt="">
+                        <p class="text-[#8C8787] text-xs">Downloads</p>
+                    </div>
+                    <div class="flex flex-col justify-center items-center">
+                        <img src="imagenes/hamburguesa.png" alt="">
+                        <p class="text-[#8C8787] text-xs">More</p>
+                    </div>
+                </div>
+                <div class="bg-black flex justify-center pb-2.5 pt-4">
+                    <img src="imagenes/Line.png" alt="">
+                </div>
+            </div>
+            <div class="mt-6">
+                <h1 class="text-white text-2xl font-bold mb-4 ml-5">Continue Watching for Emenalo</h1>
+                <div class="flex gap-3 ml-5">
+                    <div class="flex flex-col justify-center items-center rounded-sm w-28">
+                        <img class="w-full" src="imagenes/Rectangle 11.png" alt="">
+                        <img class="w-full" src="imagenes/Rectangle 16.png" alt="">
+                        <div class="bg-[#121212] flex justify-between py-2 px-4 w-full">
+                            <img src="imagenes/Group.png" alt="">
+                            <img src="imagenes/3puntos.png" alt="">
+                        </div>
+                    </div>
+                    <div class="flex flex-col justify-center items-center rounded-sm w-28">
+                        <img class="w-full" src="imagenes/Rectangle 12.png" alt="">
+                        <img class="w-full" src="imagenes/Rectangle 17.png" alt="">
+                        <div class="bg-[#121212] flex justify-between py-2 px-4 w-full">
+                            <img src="imagenes/Group.png" alt="">
+                            <img src="imagenes/3puntos.png" alt="">
+                        </div>
+                    </div>
+                    <div class="flex flex-col justify-center items-center rounded-sm w-28">
+                        <img class="w-full" src="imagenes/Rectangle 13.png" alt="">
+                        <img class="w-full" src="imagenes/Rectangle 16.png" alt="">
+                        <div class="bg-[#121212] flex justify-between py-2 px-4 w-full">
+                            <img src="imagenes/Group.png" alt="">
+                            <img src="imagenes/3puntos.png" alt="">
+                        </div>
+                    </div>
+                    <div class="flex flex-col justify-center items-center rounded-sm w-9">
+                        <img class="w-full" src="imagenes/Rectangle 14.png" alt="">
+                        <img class="w-full" src="imagenes/Rectangle 16 min.png" alt="">
+                        <div class="bg-[#121212] flex justify-end py-2 w-full">
+                            <img src="imagenes/Group.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h1 class="text-white text-2xl font-bold mt-6 mb-3 ml-5" >Popular on Netflix</h1>
+                    <div class="flex justify-center items-center gap-3 ml-5 mb-3">
+                        <img class="rounded-sm w-28" src="imagenes/Rectangle 20.png" alt="">
+                        <img class="rounded-sm w-28" src="imagenes/Rectangle 15.png" alt="">
+                        <img class="rounded-sm w-28" src="imagenes/Rectangle 19.png" alt="">
+                        <img class="rounded-sm w-9" src="imagenes/Rectangle 18.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div> 
+        <div class="pelicula hidden flex w-full h-[430px] px-8">
+            <div class="absolute flex flex-col justify-center items-center ml-[-6px] pt-7">
+                <img id="atras" class="mb-14 w-5" src="imagenes/atras.png" alt="">
+                <img class="mb-2 w-5" src="imagenes/brillo.png" alt="">
+                <img class="w-2"src="imagenes/Group 113.png" alt="">
+            </div>
+            <div class="movies flex justify-center relative w-full">
+                <img class="img-1 block w-[85%]" src="imagenes/Rectangle 27.png" alt="">
+                <div class="">
+                    <img class="img-2 absolute bottom-[100px] left-[-7px] w-[95%]" src="imagenes/Group 118.png" alt="">
+                    <p class="absolute text-white text-xs bottom-[105px] left-[825px]">54:67</p>
+                </div>
+            </div>
+            <div class="absolute flex items-center bottom-[50px] left-[100px] gap-x-[91px]">
+                <div class="flex items-center gap-1.5">
+                    <img src="imagenes/speed.png" alt="">
+                    <p class="text-white text-xs">Speed (1x)</p>
+                </div>
+                <div class="flex items-center gap-1.5">
+                    <img src="imagenes/lock.png" alt="">
+                    <p class="text-white text-xs">Lock</p>
+                </div>
+                <div class="flex items-center gap-1.5">
+                    <img src="imagenes/espisodes.png" alt="">
+                    <p class="text-white text-xs">Episodes</p>
+                </div>
+                <div class="flex items-center gap-1.5">
+                    <img src="imagenes/Audio & Subtitles.png" alt="">
+                    <p class="text-white text-xs">Audio & Subtitles</p>
+                </div>
+                <div class="flex items-center gap-1.5">
+                    <img src="imagenes/next ep.png" alt="">
+                    <p class="text-white text-xs">Next Ep.</p>
+                </div>
+            </div>
+            <div class="absolute flex items-center gap-x-52 top-[38%] left-[20%]">
+                <img src="imagenes/10 seconds.png" alt="">
+                <img src="imagenes/paused.png" alt="">
+                <img src="imagenes/10 seconds.png" alt="">
+            </div>
+        </div>
+        <div class="busqueda hidden">
+            <div class="bg-[#424242] flex justify-center items-center mt-8">
+                <img class="w-[18px]" src="imagenes/buscar.png" alt="">
+                <input class="bg-[#424242] text-white text-lg ml-1 mr-8 py-4 px-1 w-[310px]" type="text" placeholder="Search for a show, movie, genre, e.t.c.">
+                <img class="w-[17px]" src="imagenes/micro.png" alt="">
+            </div>
+            <h1 class="text-white font-bold text-[27px] ml-6 mt-7 mb-6">Top Searches</h1>
+            <div class="flex flex-col gap-y-1 mb-32">
+                <div class="bg-[#424242] flex items-center">
+                    <img src="imagenes/Rectangle 21.png" alt="">
+                    <p class="text-white ml-3">Citation</p>
+                    <img class="absolute right-1" src="imagenes/bx_bx-play-circle.png" alt="">
+                </div>
+                <div class="bg-[#424242] flex items-center">
+                    <img src="imagenes/Rectangle 22.png" alt="">
+                    <p class="text-white ml-3">Oloture</p>
+                    <img class="absolute right-1" src="imagenes/bx_bx-play-circle.png" alt="">
+                </div>
+                <div class="bg-[#424242] flex items-center">
+                    <img src="imagenes/Rectangle 21 (1).png" alt="">
+                    <p class="text-white ml-3">The Setup</p>
+                    <img class="absolute right-1" src="imagenes/bx_bx-play-circle.png" alt="">
+                </div>
+                <div class="bg-[#424242] flex items-center">
+                    <img src="imagenes/Rectangle 22 (1).png" alt="">
+                    <p class="text-white ml-3">Breaking Bad</p>
+                    <img class="absolute right-1" src="imagenes/bx_bx-play-circle.png" alt="">
+                </div>
+                <div class="bg-[#424242] flex items-center">
+                    <img src="imagenes/Rectangle 21 (2).png" alt="">
+                    <p class="text-white ml-3">Ozark</p>
+                    <img class="absolute right-1" src="imagenes/bx_bx-play-circle.png" alt="">
+                </div>
+                <div class="bg-[#424242] flex items-center">
+                    <img src="imagenes/Rectangle 22 (2).png" alt="">
+                    <p class="text-white ml-3">The Governor</p>
+                    <img class="absolute right-1" src="imagenes/bx_bx-play-circle.png" alt="">
+                </div>
+                <div class="bg-[#424242] flex items-center">
+                    <img src="imagenes/Rectangle 21 (3).png" alt="">
+                    <p class="text-white ml-3">Your Excellency</p>
+                    <img class="absolute right-1" src="imagenes/bx_bx-play-circle.png" alt="">
+                </div>
+            </div>
+            <div class="fixed bottom-[0px] w-full">
+                <div class="bg-[#121212] w-full flex justify-center gap-8 p-2.5">
+                    <div id="back-home" class="flex flex-col justify-center items-center">
+                        <img src="imagenes/home_gris.png" alt="">
+                        <p class="text-[#8C8787] text-xs">Home</p>
+                    </div>
+                    <div class="flex flex-col justify-center items-center">
+                        <img src="imagenes/Search_blanco.png" alt="">
+                        <p class="text-white text-xs">Search</p>
+                    </div>
+                    <div class="flex flex-col justify-center items-center">
+                        <img src="imagenes/reproducir.png" alt="">
+                        <p class="text-[#8C8787] text-xs">Coming Soon</p>
+                    </div>
+                    <div class="flex flex-col justify-center items-center">
+                        <img src="imagenes/descargas.png" alt="">
+                        <p class="text-[#8C8787] text-xs">Downloads</p>
+                    </div>
+                    <div class="flex flex-col justify-center items-center">
+                        <img src="imagenes/hamburguesa.png" alt="">
+                        <p class="text-[#8C8787] text-xs">More</p>
+                    </div>
+                </div>
+                <div class="bg-black flex justify-center pb-2.5 pt-4">
+                    <img src="imagenes/Line.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function(){
+        
+            $("#Profile-1").click(function(){
+                $(".profiles").toggleClass("hidden");
+                $(".home").toggleClass("hidden");
+            })
+            $("#Profile-2").click(function(){
+                $(".profiles").toggleClass("hidden");
+                $(".home").toggleClass("hidden");
+            })
+            $("#Profile-3").click(function(){
+                $(".profiles").toggleClass("hidden");
+                $(".home").toggleClass("hidden");
+            })
+            $("#Profile-4").click(function(){
+                $(".profiles").toggleClass("hidden");
+                $(".home").toggleClass("hidden");
+            })
+            $("#change_profile").click(function(){
+                $(".profiles").toggleClass("hidden");
+                $(".home").toggleClass("hidden");
+            })
+            $("#change_account").click(function(){
+                $(".profiles").toggleClass("hidden");
+                $(".login").toggleClass("hidden");
+            })   
+            $("#play").click(function(){
+                $(".home").toggleClass("hidden");
+                $(".pelicula").toggleClass("hidden");
+            })
+            $("#atras").click(function(){
+                $(".pelicula").toggleClass("hidden");
+                $(".home").toggleClass("hidden");
+            })
+            $("#Search").click(function(){
+                $(".home").toggleClass("hidden");
+                $(".busqueda").toggleClass("hidden");
+            })
+            $("#back-home").click(function(){
+                $(".busqueda").toggleClass("hidden");
+                $(".home").toggleClass("hidden");
+            })
+            $("#start_secton").click(()=>{
+                const email = $("#email").val();
+                const clave = $("#clave").val();
+                const emailregistrado = "juanfranco@gmail.com"
+                const claveregistrada = "123456789"
+
+                if(email === emailregistrado && clave === claveregistrada){   
+                $(".login").toggleClass("hidden");
+                $(".profiles").toggleClass("hidden");
+                }else{
+                    $("#advertencia").html("El correo electronico o la contaseña son incorrectas").addClass("text-red-700")
+                }
+            })
+            
+        });
+    </script>
+</body>
+</html>
